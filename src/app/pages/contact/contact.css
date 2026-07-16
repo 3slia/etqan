@@ -1,0 +1,149 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-wrapper h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.contact-info-wrapper > p {
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.method-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(18, 187, 192, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.method-details h4 {
+  margin-bottom: 0.3rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.method-details p {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+}
+
+/* Form Styles */
+.contact-form-wrapper {
+  padding: 3rem;
+}
+
+.contact-form-wrapper h2 {
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: var(--font-arabic);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(18, 187, 192, 0.15);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300D4FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  background-size: 1em;
+}
+
+select.form-control option {
+  background-color: #fff;
+  color: var(--primary-text);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}

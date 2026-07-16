@@ -1,0 +1,58 @@
+<div class="page-wrapper">
+  
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">{{ 'PORTFOLIO_PAGE.TITLE' | translate }}<span class="text-gradient">{{ 'PORTFOLIO_PAGE.TITLE_HIGHLIGHT' | translate }}</span></h1>
+      <p class="page-desc">{{ 'PORTFOLIO_PAGE.DESC' | translate }}</p>
+    </div>
+  </div>
+
+  <section class="portfolio-page-section section-padding">
+    <div class="container">
+      <!-- Filters Bar -->
+      <div class="portfolio-filters">
+        <button 
+          *ngFor="let filter of filters" 
+          class="filter-btn" 
+          [class.active]="activeFilter === filter.id"
+          (click)="setFilter(filter.id)">
+          {{ (filter.transPath + (filter.id === 'all' ? '' : '.TITLE')) | translate }}
+        </button>
+      </div>
+
+      <!-- Clean Alternating Rows List -->
+      <div class="clean-portfolio-list">
+        
+        <div class="clean-project-row" 
+             *ngFor="let project of filteredProjects; let i = index"
+             [class.reverse-row]="i % 2 !== 0">
+          
+          <div class="clean-project-visual">
+            <div class="image-wrapper">
+              <img [ngSrc]="project.image" width="600" height="400" [alt]="($any(project).transPath + '.TITLE') | translate" />
+            </div>
+          </div>
+          
+          <div class="clean-project-info">
+            <span class="clean-category-badge">{{ ($any(project).categoryTransPath + '.TITLE') | translate }}</span>
+            <h2 class="clean-title">{{ ($any(project).transPath + '.TITLE') | translate }}</h2>
+            <p class="clean-client">{{ ($any(project).transPath + '.CLIENT') | translate }}</p>
+            
+            <div class="clean-tech-stack">
+              <span class="tech-icon-wrapper" *ngFor="let tech of project.techStack" [title]="tech">
+                <img *ngIf="getTechIcon(tech)" [ngSrc]="getTechIcon(tech) || ''" width="24" height="24" [alt]="tech" class="glow-icon" />
+                <span *ngIf="!getTechIcon(tech)" class="fallback-icon">{{ tech.charAt(0) }}</span>
+              </span>
+            </div>
+            
+            <a [href]="$any(project).link || 'javascript:void(0)'" [target]="$any(project).link ? '_blank' : '_self'" class="btn btn-outline-primary mt-4 clean-btn">
+              {{ $any(project).link ? ('PORTFOLIO_PAGE.LIVE_PREVIEW' | translate) : ('PORTFOLIO_PAGE.VIEW_DETAILS' | translate) }}
+            </a>
+          </div>
+
+        </div>
+
+      </div>    </div>
+  </section>
+
+</div>

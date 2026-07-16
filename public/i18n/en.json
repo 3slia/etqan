@@ -1,0 +1,468 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "SERVICES": "Services",
+    "PORTFOLIO": "Portfolio",
+    "TESTIMONIALS": "Testimonials",
+    "CONTACT": "Contact Us",
+    "START_NOW": "Start Now"
+  },
+  "FOOTER": {
+    "DESC": "We provide innovative software solutions combining creative design and cutting-edge technologies to enhance your business success in the digital era.",
+    "QUICK_LINKS": "Quick Links",
+    "SERVICES": "Services",
+    "CONTACT_US": "Contact Us",
+    "PHONE": "Phone",
+    "EMAIL": "Email",
+    "ADDRESS": "Address",
+    "ADDRESS_VAL": "5 Al Maryoteya Sharqy, Al Rehab Tower, Sama Al Maryoteya, Banque Misr Building, 2nd Floor, Apt 211",
+    "COPYRIGHT": "All rights reserved.",
+    "MADE_WITH": "Made with",
+    "BRAND_NAME_1": "Etqan",
+    "BRAND_NAME_2": "Code",
+    "ABOUT_TEXT": "We are a leading company providing comprehensive software solutions and web development to help your business grow and digitally transform efficiently."
+  },
+  "SERVICES": {
+    "WEB_DEV": "Web Development",
+    "MOBILE_DEV": "Mobile Apps",
+    "UI_DESIGN": "UI/UX Design",
+    "TECH_CONSULT": "Tech Consultation"
+  },
+  "HOME": {
+    "BADGE": "🔥 The First Choice for Teachers",
+    "HERO_TITLE": "The Educational Platform Your Students ",
+    "HERO_TITLE_HIGHLIGHT": "Deserve",
+    "HERO_TITLE_2": "",
+    "HERO_DESC": "We build you an interactive, secure platform to protect content and easily manage your courses with full professionalism.",
+    "HERO_BTN_START": "Start Your Platform Now",
+    "HERO_BTN_PORTFOLIO": "View Our Clients' Platforms",
+    "CARDS": [
+      {
+        "TITLE": "Virtual Classrooms",
+        "DESC": "Interactive live streaming that gathers you with your students as if you are in the same place."
+      },
+      {
+        "TITLE": "Smart Exams",
+        "DESC": "Advanced assessment system that grades exams automatically and issues detailed reports."
+      },
+      {
+        "TITLE": "Total Management",
+        "DESC": "A single dashboard that allows you to easily track student performance and your accounts."
+      },
+      {
+        "TITLE": "Continuous Support",
+        "DESC": "A specialized team always backing you up to help and solve any problem instantly."
+      },
+      {
+        "TITLE": "Custom Development",
+        "DESC": "We build your platform from scratch using the latest technologies to fit your identity and style."
+      }
+    ],
+    "FEATURES": [
+      {
+        "TITLE": "Focus on Teaching.. Leave Protection to Us",
+        "DESC": "Your job is to benefit students and teach, ours is to guard your effort. We provide a fast, stable platform with security that prevents anyone from copying or leaking your videos."
+      },
+      {
+        "TITLE": "Expertise in Online Education",
+        "DESC": "We deeply understand the mindset of teachers and the needs of students, translating this into features and tools that make teaching easier and online experience comfortable."
+      },
+      {
+        "TITLE": "Properly Architected Code",
+        "DESC": "We build the platform with the latest engineering methods to withstand extreme pressure during revisions and exam nights without crashing."
+      },
+      {
+        "TITLE": "Continuous Technical Support",
+        "DESC": "Our work doesn't end when we deliver the platform. We are with you step by step, always backing you up to ensure the platform runs smoothly."
+      }
+    ],
+    "SERVICES": [
+      {
+        "TITLE": "Educational Platforms (LMS)",
+        "DESC": "Building interactive educational platforms tailored for schools and educational centers."
+      },
+      {
+        "TITLE": "Web Development",
+        "DESC": "Modern, fast, and secure websites with creative design and excellent UX."
+      },
+      {
+        "TITLE": "Mobile Applications",
+        "DESC": "Native Android and iOS applications with the highest quality, speed, and ease of use."
+      },
+      {
+        "TITLE": "UI/UX Design",
+        "DESC": "Simple and elegant interfaces focused on the perfect user experience."
+      },
+      {
+        "TITLE": "ERP Systems",
+        "DESC": "Integrated systems for managing resources and operations within companies."
+      },
+      {
+        "TITLE": "Artificial Intelligence",
+        "DESC": "Integrating AI technologies for data analysis and process improvement."
+      },
+      {
+        "TITLE": "Digital Marketing",
+        "DESC": "Data-driven marketing plans to increase sales and brand awareness."
+      },
+      {
+        "TITLE": "Cybersecurity",
+        "DESC": "Complete protection for your website and customer data against attacks."
+      }
+    ],
+    "PORTFOLIO": [
+      {
+        "TITLE": "Elmobd3 Mohamed Samy",
+        "CATEGORY": "Educational Platform"
+      },
+      {
+        "TITLE": "Mr. Abdelmaseeh Platform",
+        "CATEGORY": "Educational Platform"
+      },
+      {
+        "TITLE": "Smart School App",
+        "CATEGORY": "Mobile App"
+      },
+      {
+        "TITLE": "Enterprise ERP System",
+        "CATEGORY": "Internal Systems"
+      }
+    ],
+    "SERVICES_TITLE": "Our Core",
+    "SERVICES_TITLE_HIGHLIGHT": "Services",
+    "SERVICES_DESC": "We provide integrated technical solutions that keep pace with your aspirations and help you grow in the digital age with a touch of creativity and professionalism.",
+    "WHY_TITLE": "Why",
+    "WHY_TITLE_HIGHLIGHT": "Choose Us?",
+    "WHY_DESC": "A technical partnership that guarantees security, speed, and continuous support.",
+    "PORTFOLIO_TITLE": "Some of Our",
+    "PORTFOLIO_TITLE_HIGHLIGHT": "Work",
+    "PORTFOLIO_DESC": "We transform complex ideas into exceptional digital experiences.",
+    "VIEW_ALL_WORK": "Browse All Projects",
+    "TESTIMONIALS_TITLE": "Our Partners' ",
+    "TESTIMONIALS_TITLE_HIGHLIGHT": "Success Stories",
+    "TESTIMONIALS_DESC": "Testimonials we cherish from clients who trusted us to turn their ideas into tangible technical reality.",
+    "TESTIMONIALS": [
+      {
+        "NAME": "Ahmed Mahmoud",
+        "ROLE": "School Principal",
+        "TEXT": "Etqan Code completely changed our idea of online education. The platform is lightning fast and their technical support is excellent and always backs us up."
+      },
+      {
+        "NAME": "Sara Khaled",
+        "ROLE": "English Teacher",
+        "TEXT": "This is seriously the best thing I did for my students. The platform's interface is simple and easy on the eyes, and the students loved it."
+      },
+      {
+        "NAME": "Mohamed Ali",
+        "ROLE": "Educational Center Owner",
+        "TEXT": "The most important thing for me was security, and the platform turned out to be properly secured. This is exactly what we were looking for to prevent video leaking and recording."
+      }
+    ]
+  },
+  "ABOUT_PAGE": {
+    "TITLE": "About ",
+    "TITLE_HIGHLIGHT": "Etqan Code",
+    "DESC": "A story of passion for technology, commitment to quality, and continuous pursuit of innovation in the software world.",
+    "STORY_TITLE": "The Story Behind Etqan Code",
+    "VISION_TITLE": "Our Vision & Mission",
+    "VALUES_TITLE": "Our Core Values",
+    "TEAM_TITLE": "Our Team",
+    "TEAM": {
+      "CEO": {
+        "NAME": "Ahmed Mohamed",
+        "ROLE": "Founder & CEO",
+        "DESC": "15 years of experience in leading technical projects and digital transformation."
+      },
+      "DEV": {
+        "NAME": "Sara Khaled",
+        "ROLE": "Product Development Manager",
+        "DESC": "Software engineer specialized in cloud systems architecture."
+      },
+      "UX": {
+        "NAME": "Omar Abdullah",
+        "ROLE": "UI/UX Expert",
+        "DESC": "Passionate about creating user interfaces that combine beauty and usability."
+      },
+      "MKT": {
+        "NAME": "Fatma Ali",
+        "ROLE": "Digital Marketing Manager",
+        "DESC": "Expert in growth strategies and market analysis."
+      }
+    },
+    "VALUES": [
+      {
+        "TITLE": "Quality & Mastery",
+        "DESC": "Our name is our approach. We don't compromise on code and design quality."
+      },
+      {
+        "TITLE": "Transparency",
+        "DESC": "Clear and continuous communication with our clients across all project stages."
+      },
+      {
+        "TITLE": "Innovation",
+        "DESC": "We are always looking for the latest technologies and best creative solutions."
+      },
+      {
+        "TITLE": "Commitment",
+        "DESC": "We respect deadlines and commit to delivering projects exactly as agreed."
+      }
+    ],
+    "STORY_TEXT": "<strong>Etqan Code</strong> was founded to create a paradigm shift in digital education by providing powerful and secure educational platforms for teachers and institutions. We believe technology should be the strongest tool in a teacher's hand to easily reach thousands of students, while fully protecting their rights and efforts from any theft or leakage.",
+    "VISION_LABEL": "Vision:",
+    "VISION_TEXT": "To be the first and most trusted technical partner for every teacher and educational institution in the Arab world.",
+    "MISSION_LABEL": "Mission:",
+    "MISSION_TEXT": "To deliver customized, fast, and highly secure platforms that guarantee a teaching experience free of technical complexities."
+  },
+  "SERVICES_PAGE": {
+    "TITLE": "Our ",
+    "TITLE_HIGHLIGHT": "Services",
+    "DESC": "We provide comprehensive software and technical solutions that meet the latest global standards to ensure your success.",
+    "SIDEBAR_TITLE": "Technical Services",
+    "ITEMS": [
+      {
+        "TITLE": "Web Development",
+        "DESC": "Building professional websites for companies focused on performance, speed, responsiveness, and SEO.",
+        "FEATURES": [
+          "Corporate Websites",
+          "E-commerce Stores",
+          "Educational Platforms",
+          "Backend Development"
+        ]
+      },
+      {
+        "TITLE": "Mobile App Development",
+        "DESC": "Developing high-performance iOS & Android applications with seamless user experiences.",
+        "FEATURES": [
+          "Native Apps (Swift & Kotlin)",
+          "Cross-Platform Apps (Flutter)",
+          "Payment Gateway Integration",
+          "Powerful Dashboards"
+        ]
+      },
+      {
+        "TITLE": "UI/UX Design",
+        "DESC": "Creating modern designs focused on ease of use and providing a simplified user journey.",
+        "FEATURES": [
+          "User Research",
+          "Wireframing & Prototyping",
+          "Visual Design",
+          "Usability Testing"
+        ]
+      },
+      {
+        "TITLE": "Tech Consultation",
+        "DESC": "Helping you draw the right technical plan to digitally transform your traditional business.",
+        "FEATURES": [
+          "Infrastructure Planning",
+          "Technology Selection",
+          "Data Analysis",
+          "Data Security"
+        ]
+      },
+      {
+        "TITLE": "ERP Systems",
+        "DESC": "Custom Enterprise Resource Planning systems tailored to your workflow and operations.",
+        "FEATURES": [
+          "HRMS Systems",
+          "CRM Management",
+          "Inventory Systems",
+          "Advanced Reporting"
+        ]
+      },
+      {
+        "TITLE": "AI Solutions",
+        "DESC": "Integrating AI tools to facilitate decision making and improve customer service.",
+        "FEATURES": [
+          "Chatbots Development",
+          "Predictive Analysis",
+          "Process Automation (RPA)",
+          "AI Personalization"
+        ]
+      },
+      {
+        "TITLE": "Digital Marketing",
+        "DESC": "Data-driven marketing plans to increase sales and expand your brand reach.",
+        "FEATURES": [
+          "SEO Optimization",
+          "Social Media Management",
+          "Google Ads",
+          "Content Marketing"
+        ]
+      },
+      {
+        "TITLE": "Cybersecurity",
+        "DESC": "Complete protection for your website and customer data against cyber attacks.",
+        "FEATURES": [
+          "Vulnerability Scanning",
+          "Server Security",
+          "Database Protection",
+          "Penetration Testing"
+        ]
+      }
+    ]
+  },
+  "PORTFOLIO_PAGE": {
+    "TITLE": "Our ",
+    "TITLE_HIGHLIGHT": "Portfolio",
+    "DESC": "Browse a selection of our best projects across various tech sectors and discover the quality and impact of our work.",
+    "LIVE_PREVIEW": "Live Preview",
+    "VIEW_DETAILS": "View Details",
+    "PROJECT_CLIENT": "Client",
+    "PROJECT_PROBLEM": "Challenge",
+    "PROJECT_SOLUTION": "Solution",
+    "PROJECT_TECH": "Tech Stack",
+    "ALL_FILTER": "All",
+    "CATEGORIES": [
+      {
+        "TITLE": "Educational Platforms (LMS)",
+        "DESC": "Integrated e-learning platforms specifically designed for teachers and centers to provide an exceptional and secure learning experience.",
+        "PROJECTS": [
+          {
+            "TITLE": "Mohamed Samy Platform",
+            "CLIENT": "Mr. Mohamed Samy",
+            "PROBLEM": "Leaking educational content online and difficulty managing subscriptions of thousands of students.",
+            "SOLUTION": "Built an integrated LMS platform with video encryption to prevent downloading, and an auto-grading exam system."
+          },
+          {
+            "TITLE": "Mr. Abdelmaseeh Platform",
+            "CLIENT": "Mr. Abdelmaseeh Ishaq",
+            "PROBLEM": "Need for a robust educational platform customized for teaching high school physics with comprehensive exams.",
+            "SOLUTION": "Built a fully integrated platform to deliver specialized courses and interactive exams with student progress tracking."
+          },
+          {
+            "TITLE": "Smart School App",
+            "CLIENT": "Private Schools Group",
+            "PROBLEM": "Poor communication between school and parents and no way to track attendance and grades instantly.",
+            "SOLUTION": "Interactive mobile app allowing parents to track their children instantly with smart notifications and absence management."
+          }
+        ]
+      },
+      {
+        "TITLE": "Websites",
+        "DESC": "Fast, responsive, and SEO-optimized websites for companies and organizations.",
+        "PROJECTS": [
+          {
+            "TITLE": "B2B E-commerce Platform",
+            "CLIENT": "Medical Equipment Factory",
+            "PROBLEM": "Need an electronic platform to sell and distribute wholesale products to agents and pharmacies.",
+            "SOLUTION": "Built an advanced E-commerce platform supporting dynamic pricing for agents and integrated with the company's inventory system."
+          },
+          {
+            "TITLE": "Consultancy Firm Official Website",
+            "CLIENT": "Financial Consultancy Firm",
+            "PROBLEM": "Old website doesn't reflect the company's professionalism and fails to convert visitors into clients.",
+            "SOLUTION": "Completely redesigned and rebuilt the website with a modern UI and simplified consultation booking system."
+          }
+        ]
+      },
+      {
+        "TITLE": "Mobile App Development",
+        "DESC": "Native, high-performance iOS and Android applications.",
+        "PROJECTS": [
+          {
+            "TITLE": "Logistics and Delivery App",
+            "CLIENT": "Fast Delivery Company",
+            "PROBLEM": "Delay in order tracking and difficulty for couriers to communicate with clients and manage delivery routes.",
+            "SOLUTION": "Developed a comprehensive mobile app for couriers and clients with live map tracking and smart routing."
+          },
+          {
+            "TITLE": "Clinic Booking App",
+            "CLIENT": "Medical Complex",
+            "PROBLEM": "Continuous crowding in waiting rooms and poor management of doctors' appointments.",
+            "SOLUTION": "App allowing patients to book appointments, know their turn, and consult doctors remotely (Telehealth)."
+          }
+        ]
+      },
+      {
+        "TITLE": "ERP & Internal Systems",
+        "DESC": "Enterprise resource management systems to transform paper work into an automated digital system.",
+        "PROJECTS": [
+          {
+            "TITLE": "Integrated ERP System",
+            "CLIENT": "Major Corporation Group",
+            "PROBLEM": "Difficulty connecting different company departments and managing financial and human resources.",
+            "SOLUTION": "Built a custom ERP system connecting all departments with accurate analytical dashboards and real-time reports."
+          },
+          {
+            "TITLE": "Real Estate Management System",
+            "CLIENT": "Real Estate Investment Company",
+            "PROBLEM": "Difficulty tracking rent, maintenance, and contracts for a large number of properties.",
+            "SOLUTION": "Web platform to manage properties, automatic rent reminders, and a portal for tenants to submit maintenance requests."
+          }
+        ]
+      },
+      {
+        "TITLE": "UI/UX Design",
+        "DESC": "Attractive designs focused on improving user experience and achieving goals.",
+        "PROJECTS": [
+          {
+            "TITLE": "Banking App Redesign",
+            "CLIENT": "Local Bank",
+            "PROBLEM": "Complex user interface causing many customer complaints and low store ratings.",
+            "SOLUTION": "Conducted user research and completely re-engineered the app interface to be simpler, faster, and more secure."
+          }
+        ]
+      },
+      {
+        "TITLE": "AI Solutions",
+        "DESC": "Process automation and smart data analysis.",
+        "PROJECTS": [
+          {
+            "TITLE": "Smart Customer Service Chatbot",
+            "CLIENT": "Telecom Company",
+            "PROBLEM": "Massive pressure on the customer service team and delay in answering repeated inquiries.",
+            "SOLUTION": "Developed a Chatbot based on NLP to automatically reply to customers and solve 70% of problems without human intervention."
+          }
+        ]
+      }
+    ]
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Contact ",
+    "TITLE_HIGHLIGHT": "Us",
+    "DESC": "We are here to answer your inquiries and discuss your next project.",
+    "INFO_TITLE": "Contact Information",
+    "INFO_DESC": "Whether you have an inquiry or want to start a new project, our team is here to serve you.",
+    "FORM_TITLE": "Request a Quote",
+    "FORM_SUBMIT": "Submit Request",
+    "FORM_LOADING": "Sending Request..."
+  },
+  "TESTIMONIALS_PAGE": {
+    "TITLE": "Client ",
+    "TITLE_HIGHLIGHT": "Testimonials",
+    "DESC": "Our clients' trust is our most valuable asset. Discover what they say about their experience with us.",
+    "ITEMS": [
+      {
+        "NAME": "Eng. Khaled Al-Salem",
+        "ROLE": "CEO - Advanced Tech Co.",
+        "TEXT": "Working with Etqan Code was beyond imagination. Perfect punctuality and we received a high-quality platform. Truly a professional team that knows what they are doing."
+      },
+      {
+        "NAME": "Dr. Noura Al-Abdullah",
+        "ROLE": "Founder - Care Clinics",
+        "TEXT": "The booking system they built reduced waiting times by 40%. Huge thanks to Etqan Code for their expertise and for understanding exactly what we needed."
+      },
+      {
+        "NAME": "Fahad Al-Tamimi",
+        "ROLE": "Operations Manager - Logistics+",
+        "TEXT": "The couriers' app took our business to a whole new level! Order tracking is very accurate and the app is very easy to use for all employees."
+      },
+      {
+        "NAME": "Ahmed Mahmoud",
+        "ROLE": "School Principal",
+        "TEXT": "Etqan Code completely changed our idea of online education. The platform is lightning fast and their technical support is excellent and always backs us up."
+      },
+      {
+        "NAME": "Sara Khaled",
+        "ROLE": "English Teacher",
+        "TEXT": "This is seriously the best thing I did for my students. The platform's interface is simple and easy on the eyes, and the students loved it."
+      },
+      {
+        "NAME": "Mohamed Ali",
+        "ROLE": "Educational Center Owner",
+        "TEXT": "The most important thing for me was security, and the platform turned out to be properly secured. This is exactly what we were looking for to prevent video leaking and recording."
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a [routerLink]="['/', currentLang]">
+        <!-- Placeholder for logo image, using text for now -->
+        <span class="logo-text">إتقان <span class="highlight">كود</span></span>
+      </a>
+    </div>
+
+    <button class="mobile-menu-btn" (click)="toggleMenu()">
+      @if (!isMenuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      }
+      @if (isMenuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      }
+    </button>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="menu-backdrop" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+
+    <div class="sidebar-wrapper" [class.open]="isMenuOpen">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a [routerLink]="['/', currentLang]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">{{ 'NAV.HOME' | translate }}</a></li>
+          <li><a [routerLink]="['/', currentLang, 'services']" routerLinkActive="active" (click)="toggleMenu()">{{ 'NAV.SERVICES' | translate }}</a></li>
+          <li><a [routerLink]="['/', currentLang, 'portfolio']" routerLinkActive="active" (click)="toggleMenu()">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
+          <li><a [routerLink]="['/', currentLang, 'about']" routerLinkActive="active" (click)="toggleMenu()">{{ 'NAV.ABOUT' | translate }}</a></li>
+          <li><a [routerLink]="['/', currentLang, 'testimonials']" routerLinkActive="active" (click)="toggleMenu()">{{ 'NAV.TESTIMONIALS' | translate }}</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <button class="btn btn-secondary lang-btn" (click)="switchLanguage()" style="padding: 10px 15px; font-weight: bold; background: rgba(99, 102, 241, 0.1); color: var(--primary-color); border: none; cursor: pointer;">
+          {{ currentLang === 'ar' ? 'EN' : 'عربي' }}
+        </button>
+        <a [routerLink]="['/', currentLang, 'contact']" class="btn btn-primary" (click)="toggleMenu()">{{ 'NAV.CONTACT' | translate }}</a>
+      </div>
+    </div>
+  </div>
+</header>

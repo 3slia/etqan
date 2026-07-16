@@ -1,0 +1,39 @@
+<!-- Global Sponsor Splash Screen -->
+<div *ngIf="splashState() !== 'hidden'" class="global-splash-screen" [class.fading-out]="splashState() === 'fading'">
+  <div class="etqan-logo-intro">
+    
+    <!-- نقطتا حرف الـ (ق) تتحولان لأعين ذكية تفاعلية -->
+    <div class="eyes-container">
+      <!-- العين اليسرى -->
+      <div class="eye" [ngClass]="{'winking': winkState() === 'wink_left' || winkState() === 'closed'}">
+        <div class="pupil" [class.hidden]="winkState() === 'wink_left' || winkState() === 'closed'"></div>
+      </div>
+
+      <!-- العين اليمنى -->
+      <div class="eye" [ngClass]="{'winking': winkState() === 'wink_right' || winkState() === 'closed'}">
+        <div class="pupil" [class.hidden]="winkState() === 'wink_right' || winkState() === 'closed'"></div>
+      </div>
+    </div>
+
+    <!-- نص الشعار وشعار إتقان كود -->
+    <h1 class="etqan-title">
+      إتقان <span class="highlight">كود</span>
+    </h1>
+    <p class="etqan-subtitle">للحلول البرمجية متكاملة الذكاء</p>
+    
+  </div>
+</div>
+
+<app-header></app-header>
+<main>
+  <router-outlet />
+</main>
+<app-footer></app-footer>
+<app-chat-widget></app-chat-widget>
+
+<button class="scroll-to-top-btn" 
+        [class.visible]="showScrollTopButton()" 
+        (click)="scrollToTop()" 
+        aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>

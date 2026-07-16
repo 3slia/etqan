@@ -1,0 +1,109 @@
+<div class="page-wrapper">
+  
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">{{ 'ABOUT_PAGE.TITLE' | translate }}<span class="text-gradient">{{ 'ABOUT_PAGE.TITLE_HIGHLIGHT' | translate }}</span></h1>
+      <p class="page-desc">{{ 'ABOUT_PAGE.DESC' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Story Section (Unified) -->
+  <section class="minimal-section pt-5">
+    <div class="container">
+      <div class="minimal-grid">
+        <div class="minimal-content">
+          <h2 class="minimal-title">{{ 'ABOUT_PAGE.STORY_TITLE' | translate }}</h2>
+          <p class="minimal-text" [innerHTML]="'ABOUT_PAGE.STORY_TEXT' | translate">
+          </p>
+          
+          <h2 class="minimal-title mt-5">{{ 'ABOUT_PAGE.VISION_TITLE' | translate }}</h2>
+          <div class="mission-vision-blocks">
+            <div class="mv-block">
+              <strong>{{ 'ABOUT_PAGE.VISION_LABEL' | translate }}</strong> {{ 'ABOUT_PAGE.VISION_TEXT' | translate }}
+            </div>
+            <div class="mv-block">
+              <strong>{{ 'ABOUT_PAGE.MISSION_LABEL' | translate }}</strong> {{ 'ABOUT_PAGE.MISSION_TEXT' | translate }}
+            </div>
+          </div>
+        </div>
+        
+        <div class="minimal-image-side">
+          <img ngSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" width="800" height="533" alt="فريق العمل" class="corporate-img" priority />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values (Simple Grid) -->
+  <section class="minimal-section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="minimal-title">{{ 'ABOUT_PAGE.VALUES_TITLE' | translate }}</h2>
+      </div>
+      
+      <div class="minimal-services-grid">
+        <div class="minimal-service-card" *ngFor="let i of [0,1,2,3]">
+          <div class="minimal-icon-wrapper">
+            <svg *ngIf="i === 0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg *ngIf="i === 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <svg *ngIf="i === 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M5.5 5.5l1.5 1.5"></path><path d="M17 17l1.5 1.5"></path><circle cx="12" cy="12" r="5"></circle></svg>
+            <svg *ngIf="i === 3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="minimal-service-title">{{ 'ABOUT_PAGE.VALUES.' + i + '.TITLE' | translate }}</h3>
+          <p class="minimal-service-desc">{{ 'ABOUT_PAGE.VALUES.' + i + '.DESC' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section (Org Tree) -->
+  <section class="minimal-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="minimal-title">{{ 'ABOUT_PAGE.TEAM_TITLE' | translate }}</h2>
+      </div>
+      
+      <div class="org-tree-container" dir="ltr">
+        <div class="org-tree">
+          <ul>
+            <li>
+              <div class="tree-node ceo-node" [attr.dir]="(currentLang$ | async) === 'en' ? 'ltr' : 'rtl'">
+                <div class="node-icon">CEO</div>
+                <h3>{{ 'ABOUT_PAGE.TEAM.CEO.NAME' | translate }}</h3>
+                <span class="node-role">{{ 'ABOUT_PAGE.TEAM.CEO.ROLE' | translate }}</span>
+                <p>{{ 'ABOUT_PAGE.TEAM.CEO.DESC' | translate }}</p>
+              </div>
+              <ul>
+                <li>
+                  <div class="tree-node" [attr.dir]="(currentLang$ | async) === 'en' ? 'ltr' : 'rtl'">
+                    <div class="node-icon">Dev</div>
+                    <h3>{{ 'ABOUT_PAGE.TEAM.DEV.NAME' | translate }}</h3>
+                    <span class="node-role">{{ 'ABOUT_PAGE.TEAM.DEV.ROLE' | translate }}</span>
+                    <p>{{ 'ABOUT_PAGE.TEAM.DEV.DESC' | translate }}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="tree-node" [attr.dir]="(currentLang$ | async) === 'en' ? 'ltr' : 'rtl'">
+                    <div class="node-icon">UX</div>
+                    <h3>{{ 'ABOUT_PAGE.TEAM.UX.NAME' | translate }}</h3>
+                    <span class="node-role">{{ 'ABOUT_PAGE.TEAM.UX.ROLE' | translate }}</span>
+                    <p>{{ 'ABOUT_PAGE.TEAM.UX.DESC' | translate }}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="tree-node" [attr.dir]="(currentLang$ | async) === 'en' ? 'ltr' : 'rtl'">
+                    <div class="node-icon">Mkt</div>
+                    <h3>{{ 'ABOUT_PAGE.TEAM.MKT.NAME' | translate }}</h3>
+                    <span class="node-role">{{ 'ABOUT_PAGE.TEAM.MKT.ROLE' | translate }}</span>
+                    <p>{{ 'ABOUT_PAGE.TEAM.MKT.DESC' | translate }}</p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

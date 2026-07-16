@@ -1,0 +1,38 @@
+# ==========================================
+# ملف الزحف الاحترافي لموقع إتقان كود
+# ==========================================
+
+# 1. إعدادات مخصصة لعناكب جوجل (Googlebot) لسرعة الأرشفة
+User-agent: Googlebot
+Allow: /
+Allow: /assets/images/
+Allow: /home
+Allow: /about
+Allow: /services
+Allow: /portfolio
+Allow: /testimonials
+Allow: /contact
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*?* # منع زحف روابط البحث العشوائية لتوفير ميزانية الزحف (Crawl Budget)
+
+# 2. إعدادات لعناكب محركات البحث الكبرى الأخرى
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# 3. إعدادات عامة لبقية الروبوتات
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.txt$
+
+# 4. خريطة الموقع (الأهم لمحركات البحث)
+Sitemap: https://etqan-code.com/sitemap.xml

@@ -1,0 +1,269 @@
+/* Magnetic CTA */
+.footer-cta-section {
+  padding: 8rem 0 4rem;
+  background: var(--bg-section);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+}
+
+.footer-cta-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.footer-cta-email {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-cta-email::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.footer-cta-email:hover {
+  color: var(--secondary-color);
+}
+
+.footer-cta-email:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Premium Dark Footer Base */
+.main-footer {
+  background: #0f172a; /* Midnight Blue / Dark Slate */
+  color: #94a3b8; /* Soft slate text */
+  padding-top: 5rem;
+  border-top: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-col h3 {
+  color: #f8fafc; /* Crisp white for headings */
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.logo-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f8fafc;
+  font-family: var(--font-arabic);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.logo-text .highlight {
+  color: var(--primary-color);
+}
+
+.footer-about {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-links a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--hover-bg, var(--primary-color));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px var(--hover-shadow, rgba(18, 187, 192, 0.3));
+}
+
+.social-links a:hover::before {
+  opacity: 1;
+}
+
+@keyframes pulse-social {
+  0% { box-shadow: 0 0 0 0 var(--pulse-color); }
+  70% { box-shadow: 0 0 0 10px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.social-links a[aria-label="WhatsApp"] {
+  --hover-bg: #25D366;
+  --hover-shadow: rgba(37, 211, 102, 0.4);
+  --pulse-color: rgba(37, 211, 102, 0.4);
+  color: #25D366;
+  border-color: rgba(37, 211, 102, 0.3);
+  animation: pulse-social 2s infinite;
+}
+.social-links a[aria-label="WhatsApp"]:hover { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+
+.social-links a[aria-label="Facebook"] {
+  --hover-bg: #1877F2;
+  --hover-shadow: rgba(24, 119, 242, 0.4);
+  --pulse-color: rgba(24, 119, 242, 0.4);
+  color: #1877F2;
+  border-color: rgba(24, 119, 242, 0.3);
+  animation: pulse-social 2s infinite;
+  animation-delay: 0.2s;
+}
+.social-links a[aria-label="Facebook"]:hover { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+
+.social-links a[aria-label="Twitter"] {
+  --hover-bg: #1DA1F2;
+  --hover-shadow: rgba(29, 161, 242, 0.4);
+  --pulse-color: rgba(29, 161, 242, 0.4);
+  color: #1DA1F2;
+  border-color: rgba(29, 161, 242, 0.3);
+  animation: pulse-social 2s infinite;
+  animation-delay: 0.4s;
+}
+.social-links a[aria-label="Twitter"]:hover { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+
+.social-links a[aria-label="LinkedIn"] {
+  --hover-bg: #0A66C2;
+  --hover-shadow: rgba(10, 102, 194, 0.4);
+  --pulse-color: rgba(10, 102, 194, 0.4);
+  color: #0A66C2;
+  border-color: rgba(10, 102, 194, 0.3);
+  animation: pulse-social 2s infinite;
+  animation-delay: 0.6s;
+}
+.social-links a[aria-label="LinkedIn"]:hover { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+
+.social-links a[aria-label="Instagram"] {
+  --hover-bg: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  --hover-shadow: rgba(220, 39, 67, 0.4);
+  --pulse-color: rgba(220, 39, 67, 0.4);
+  color: #e6683c;
+  border-color: rgba(220, 39, 67, 0.3);
+  animation: pulse-social 2s infinite;
+  animation-delay: 0.8s;
+}
+.social-links a[aria-label="Instagram"]:hover { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+
+.social-links a svg {
+  transition: transform 0.4s ease;
+}
+
+.social-links a:hover svg {
+  transform: scale(1.15);
+}
+
+.links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-col ul li {
+  margin-bottom: 0.8rem;
+}
+
+.links-col ul li a {
+  transition: all 0.3s ease;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.links-col ul li a:hover {
+  color: var(--primary-color);
+  transform: translateX(-5px); /* Slide slightly left for RTL */
+}
+
+.contact-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.minimal-contact {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.minimal-contact::before {
+  content: '•';
+  color: var(--primary-color);
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.footer-bottom .highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

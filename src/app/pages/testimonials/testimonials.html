@@ -1,0 +1,35 @@
+<div class="page-wrapper">
+  
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">{{ 'TESTIMONIALS_PAGE.TITLE' | translate }} <span class="text-gradient">{{ 'TESTIMONIALS_PAGE.TITLE_HIGHLIGHT' | translate }}</span></h1>
+      <p class="page-desc">{{ 'TESTIMONIALS_PAGE.DESC' | translate }}</p>
+    </div>
+  </div>
+
+  <section class="clean-testimonials-section section-padding">
+    <div class="container">
+      <div class="clean-testimonials-grid">
+        <div class="clean-testimonial-card" *ngFor="let item of testimonials; let i = index">
+          <!-- 5 Stars Rating -->
+          <div class="stars-rating">
+            <svg *ngFor="let s of [1,2,3,4,5]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          
+          <p class="clean-testimonial-text">"{{ 'TESTIMONIALS_PAGE.ITEMS.' + i + '.TEXT' | translate }}"</p>
+          
+          <div class="clean-author-box">
+            <div class="clean-author-avatar" [ngStyle]="{'background': 'var(--gradient-' + ((i % 3) + 1) + ')'}">
+              {{ ('TESTIMONIALS_PAGE.ITEMS.' + i + '.NAME' | translate)?.charAt(0) }}
+            </div>
+            <div class="clean-author-info">
+              <h4 class="clean-author-name">{{ 'TESTIMONIALS_PAGE.ITEMS.' + i + '.NAME' | translate }}</h4>
+              <span class="clean-author-role">{{ 'TESTIMONIALS_PAGE.ITEMS.' + i + '.ROLE' | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

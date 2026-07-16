@@ -1,0 +1,116 @@
+<div class="page-wrapper">
+  
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">{{ 'CONTACT_PAGE.TITLE' | translate }}<span class="text-gradient">{{ 'CONTACT_PAGE.TITLE_HIGHLIGHT' | translate }}</span></h1>
+      <p class="page-desc">{{ 'CONTACT_PAGE.DESC' | translate }}</p>
+    </div>
+  </div>
+
+  <section class="contact-section section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <h2 class="mb-4">{{ 'CONTACT_PAGE.INFO_TITLE' | translate }}</h2>
+          <p class="mb-4">{{ 'CONTACT_PAGE.INFO_DESC' | translate }}</p>
+          
+          <div class="contact-methods">
+            <div class="method-card glass-card">
+              <div class="method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="method-details">
+                <h4>اتصل بنا</h4>
+                <p dir="ltr">+201027052213</p>
+              </div>
+            </div>
+            
+            <div class="method-card glass-card">
+              <div class="method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="method-details">
+                <h4>البريد الإلكتروني</h4>
+                <p>info@etqancode.com</p>
+              </div>
+            </div>
+            
+            <div class="method-card glass-card">
+              <div class="method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="method-details">
+                <h4>المقر الرئيسي</h4>
+                <p>5ش المريوطية شرقي برج الرحاب من مدينه سما المريوطيه عماره بنك مصر الدور التاني شقه 211</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Google Maps Embed -->
+          <div class="map-container" style="margin-top: 2rem;">
+            <iframe src="https://maps.google.com/maps?q=سما%20المريوطية%20الهرم&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper glass-card">
+          <h2>{{ 'CONTACT_PAGE.FORM_TITLE' | translate }}</h2>
+          <form (submit)="onSubmit($event)">
+            <div class="form-group">
+              <label for="name">الاسم الكامل *</label>
+              <input type="text" id="name" name="fullName" [(ngModel)]="formData.fullName" class="form-control" placeholder="أدخل اسمك الكريم" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">اسم الشركة / المؤسسة</label>
+              <input type="text" id="company" name="companyName" [(ngModel)]="formData.companyName" class="form-control" placeholder="أدخل اسم شركتك">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني *</label>
+                <input type="email" id="email" name="email" [(ngModel)]="formData.email" class="form-control" placeholder="example@domain.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">رقم الهاتف *</label>
+                <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" class="form-control" placeholder="05X XXX XXXX" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">نوع الخدمة المطلوبة *</label>
+              <select id="service" name="serviceType" [(ngModel)]="formData.serviceType" class="form-control" required>
+                <option value="" disabled selected>اختر الخدمة</option>
+                <option value="تصميم وتطوير مواقع الويب">تصميم وتطوير مواقع الويب</option>
+                <option value="برمجة تطبيقات الجوال">برمجة تطبيقات الجوال</option>
+                <option value="خدمات السيو والتسويق الإلكتروني">خدمات السيو والتسويق الإلكتروني</option>
+                <option value="تصميم الهوية البصرية">تصميم الهوية البصرية</option>
+                <option value="أنظمة ERP">أنظمة ERP</option>
+                <option value="استشارات فنية برمجية">استشارات فنية برمجية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">تفاصيل المشروع *</label>
+              <textarea id="message" name="projectDetails" [(ngModel)]="formData.projectDetails" rows="5" class="form-control" placeholder="اكتب لنا نبذة عن مشروعك واحتياجاتك..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="isLoading" [style.opacity]="isLoading ? '0.7' : '1'">
+              {{ isLoading ? ('CONTACT_PAGE.FORM_LOADING' | translate) : ('CONTACT_PAGE.FORM_SUBMIT' | translate) }}
+            </button>
+            
+            <!-- رسالة الحالة -->
+            <div *ngIf="statusMessage" style="margin-top: 15px; padding: 12px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600;" 
+                 [ngStyle]="{'background': isSuccess ? '#ecfdf5' : '#fef2f2', 'color': isSuccess ? '#047857' : '#b91c1c'}">
+              {{ statusMessage }}
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>

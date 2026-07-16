@@ -1,0 +1,211 @@
+<div class="home-wrapper light-theme">
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">{{ 'HOME.BADGE' | translate }}</div>
+        <h1 class="hero-title">{{ 'HOME.HERO_TITLE' | translate }}<span class="text-gradient">{{ 'HOME.HERO_TITLE_HIGHLIGHT' | translate }}</span>{{ 'HOME.HERO_TITLE_2' | translate }}</h1>
+        <p class="hero-desc">{{ 'HOME.HERO_DESC' | translate }}</p>
+        <div class="hero-actions">
+          <a [routerLink]="['/', currentLang, 'contact']" class="btn btn-primary">{{ 'HOME.HERO_BTN_START' | translate }}</a>
+          <a [routerLink]="['/', currentLang, 'portfolio']" class="btn btn-outline">{{ 'HOME.HERO_BTN_PORTFOLIO' | translate }}</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="interactive-cards-container" #interactiveCardsContainer>
+          <div class="cards-3d-wrapper" #cardsWrapper>
+            
+            <!-- Abstract background shape -->
+            <div class="abstract-shape"></div>
+
+            <!-- Card 1: Virtual Classrooms -->
+            <div class="floating-card card-virtual">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14v-4z"></path><rect x="3" y="6" width="12" height="12" rx="2" ry="2"></rect></svg>
+              </div>
+              <h4>{{ 'HOME.CARDS.0.TITLE' | translate }}</h4>
+              <p>{{ 'HOME.CARDS.0.DESC' | translate }}</p>
+            </div>
+
+            <!-- Card 2: Smart Exams -->
+            <div class="floating-card card-exams">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"></path><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"></path></svg>
+              </div>
+              <h4>{{ 'HOME.CARDS.1.TITLE' | translate }}</h4>
+              <p>{{ 'HOME.CARDS.1.DESC' | translate }}</p>
+            </div>
+
+            <!-- Card 3: Total Management -->
+            <div class="floating-card card-management">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+              </div>
+              <h4>{{ 'HOME.CARDS.2.TITLE' | translate }}</h4>
+              <p>{{ 'HOME.CARDS.2.DESC' | translate }}</p>
+            </div>
+
+            <!-- Card 4: Continuous Support -->
+            <div class="floating-card card-support">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h4>{{ 'HOME.CARDS.3.TITLE' | translate }}</h4>
+              <p>{{ 'HOME.CARDS.3.DESC' | translate }}</p>
+            </div>
+
+            <!-- Card 5: Custom Development -->
+            <div class="floating-card card-custom">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h4>{{ 'HOME.CARDS.4.TITLE' | translate }}</h4>
+              <p>{{ 'HOME.CARDS.4.DESC' | translate }}</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimalist Services Section -->
+  <section class="minimal-services-section section-padding">
+    <div class="container">
+      <div class="section-header-centered">
+        <h2 class="section-title">{{ 'HOME.SERVICES_TITLE' | translate }} <span class="text-gradient">{{ 'HOME.SERVICES_TITLE_HIGHLIGHT' | translate }}</span></h2>
+        <p class="section-subtitle">{{ 'HOME.SERVICES_DESC' | translate }}</p>
+      </div>
+      
+      <div class="minimal-services-grid">
+        <div class="minimal-service-card" *ngFor="let service of services; let i = index">
+          <div class="minimal-icon-wrapper">
+            <svg *ngIf="service.icon === 'book'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <svg *ngIf="service.icon === 'monitor'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <svg *ngIf="service.icon === 'smartphone'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <svg *ngIf="service.icon === 'pen-tool'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+            <svg *ngIf="service.icon === 'database'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <svg *ngIf="service.icon === 'zap'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <svg *ngIf="service.icon === 'trending-up'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            <svg *ngIf="service.icon === 'shield'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="minimal-service-title">{{ 'HOME.SERVICES.' + i + '.TITLE' | translate }}</h3>
+          <p class="minimal-service-desc">{{ 'HOME.SERVICES.' + i + '.DESC' | translate }}</p>
+          <a [routerLink]="['/', currentLang, 'services']" class="minimal-service-footer" style="text-decoration: none;">
+            <span class="learn-more">{{ 'PORTFOLIO_PAGE.VIEW_DETAILS' | translate }}</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section section-padding">
+    <div class="container">
+      <div class="section-header-centered">
+        <h2 class="section-title">{{ 'HOME.PORTFOLIO_TITLE' | translate }} <span class="text-gradient">{{ 'HOME.PORTFOLIO_TITLE_HIGHLIGHT' | translate }}</span></h2>
+        <p class="section-subtitle">{{ 'HOME.PORTFOLIO_DESC' | translate }}</p>
+      </div>
+      
+      <div class="bespoke-portfolio-container">
+        <!-- Right Side: List of Projects -->
+        <div class="bespoke-portfolio-list">
+          <a class="bespoke-project-item" 
+               *ngFor="let item of portfolio; let i = index"
+               (mouseenter)="activeProjectIndex = i"
+               [class.active]="activeProjectIndex === i"
+               [href]="item.link ? item.link : '/portfolio#' + 'project-' + item.id"
+               [target]="item.link ? '_blank' : '_self'"
+               style="cursor: pointer; text-decoration: none; color: inherit; display: flex;">
+            <div class="project-number">0{{ i + 1 }}</div>
+            <div class="project-info">
+              <span class="project-category">{{ 'HOME.PORTFOLIO.' + i + '.CATEGORY' | translate }}</span>
+              <h3 class="project-title">{{ 'HOME.PORTFOLIO.' + i + '.TITLE' | translate }}</h3>
+            </div>
+            <div class="project-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Left Side: Sticky Image Showcase -->
+        <div class="bespoke-portfolio-visual">
+          <div class="visual-container">
+             <img *ngFor="let item of portfolio; let i = index"
+                  [ngSrc]="item.image" 
+                  [class.active]="activeProjectIndex === i"
+                  class="portfolio-image-layer"
+                  fill
+                  [loading]="i === 0 ? 'eager' : 'lazy'"
+                  [alt]="('HOME.PORTFOLIO.' + i + '.TITLE') | translate" />
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" style="text-align: center; margin-top: 5rem;">
+        <a [routerLink]="['/', currentLang, 'portfolio']" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem; border-radius: 30px;">{{ 'HOME.VIEW_ALL_WORK' | translate }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Features Section (Why Choose Us) -->
+  <section class="clean-features-section section-padding">
+    <div class="container">
+      <div class="section-header-centered">
+        <h2 class="section-title">{{ 'HOME.WHY_TITLE' | translate }} <span class="text-gradient">{{ 'HOME.WHY_TITLE_HIGHLIGHT' | translate }}</span></h2>
+        <p class="section-subtitle">{{ 'HOME.WHY_DESC' | translate }}</p>
+      </div>
+
+      <div class="clean-features-grid">
+        <div class="clean-feature-card" *ngFor="let feature of features; let i = index" #featureCard>
+          <div class="clean-feature-icon">
+            <svg *ngIf="feature.icon === 'shield'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg *ngIf="feature.icon === 'user-check'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+            <svg *ngIf="feature.icon === 'book-open'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <svg *ngIf="feature.icon === 'server'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            <svg *ngIf="feature.icon === 'headphones'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            <svg *ngIf="feature.icon === 'user-x'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="18" y1="8" x2="23" y2="13"></line><line x1="23" y1="8" x2="18" y2="13"></line></svg>
+          </div>
+          <h3 class="clean-feature-title">{{ 'HOME.FEATURES.' + i + '.TITLE' | translate }}</h3>
+          <p class="clean-feature-desc">{{ 'HOME.FEATURES.' + i + '.DESC' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Testimonials Section -->
+  <section class="clean-testimonials-section section-padding">
+    <div class="container">
+      <div class="section-header-centered">
+        <h2 class="section-title">{{ 'HOME.TESTIMONIALS_TITLE' | translate }} <span class="text-gradient">{{ 'HOME.TESTIMONIALS_TITLE_HIGHLIGHT' | translate }}</span></h2>
+        <p class="section-subtitle">{{ 'HOME.TESTIMONIALS_DESC' | translate }}</p>
+      </div>
+
+      <div class="clean-testimonials-grid">
+        <div class="clean-testimonial-card" *ngFor="let item of testimonials; let i = index">
+          <!-- 5 Stars Rating -->
+          <div class="stars-rating">
+            <svg *ngFor="let s of [1,2,3,4,5]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          
+          <p class="clean-testimonial-text">"{{ 'HOME.TESTIMONIALS.' + i + '.TEXT' | translate }}"</p>
+          
+          <div class="clean-author-box">
+            <div class="clean-author-avatar" [ngStyle]="{'background': 'var(--gradient-' + ((i % 3) + 1) + ')'}">
+              {{ ('HOME.TESTIMONIALS.' + i + '.NAME' | translate).charAt(0) }}
+            </div>
+            <div class="clean-author-info">
+              <h4 class="clean-author-name">{{ 'HOME.TESTIMONIALS.' + i + '.NAME' | translate }}</h4>
+              <span class="clean-author-role">{{ 'HOME.TESTIMONIALS.' + i + '.ROLE' | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

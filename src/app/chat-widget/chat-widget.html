@@ -1,0 +1,68 @@
+<!-- Chat Button -->
+<button class="chat-toggle-btn" (click)="toggleChat()" [class.hide]="isOpen">
+  <span class="unread-badge" *ngIf="unreadCount > 0">{{ unreadCount }}</span>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+</button>
+
+<!-- Chat Window -->
+<div class="chat-window" [class.open]="isOpen">
+  <div class="chat-header">
+    <div class="chat-title">
+      <div class="human-avatar">
+        <img ngSrc="/assets/images/etqan-logo.jpg" width="40" height="40" alt="إتقان كود" loading="lazy">
+      </div>
+      <div>
+        <h4>إتقان كود</h4>
+        <span>متصل الآن</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="minimize-btn" (click)="toggleChat()" title="تصغير">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <button class="close-btn" (click)="closeAndClearChat()" title="إغلاق ومسح المحادثة">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="chat-body" #chatBody>
+    <div class="message-wrapper" *ngFor="let msg of messages" 
+         [class.bot-wrapper]="msg.sender === 'bot'" 
+         [class.user-wrapper]="msg.sender === 'user'"
+         [class.system-wrapper]="msg.sender === 'system'">
+      
+      <div class="message-avatar" *ngIf="msg.sender === 'bot'">
+        <img ngSrc="/assets/images/etqan-logo.jpg" width="40" height="40" alt="إتقان كود" loading="lazy">
+      </div>
+      
+      <div class="message-bubble" 
+           [class.bot-msg]="msg.sender === 'bot'" 
+           [class.user-msg]="msg.sender === 'user'"
+           [class.system-msg]="msg.sender === 'system'">
+        {{ msg.text }}
+      </div>
+    </div>
+    
+    <div class="message-wrapper bot-wrapper" *ngIf="isTyping">
+      <div class="message-avatar">
+        <img ngSrc="/assets/images/etqan-logo.jpg" width="40" height="40" alt="إتقان كود" loading="lazy">
+      </div>
+      <div class="typing-indicator message-bubble bot-msg">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <ng-container *ngIf="isSessionActive; else sessionEnded">
+      <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="اكتب رسالتك هنا..." class="chat-input" />
+      <button class="send-btn" (click)="sendMessage()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </ng-container>
+    <ng-template #sessionEnded>
+      <button class="restart-btn" (click)="restartSession()">بدء محادثة جديدة</button>
+    </ng-template>
+  </div>
+</div>
